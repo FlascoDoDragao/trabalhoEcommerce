@@ -49,6 +49,7 @@ public class ProdutoService {
 		produtoDTO.setValorUnitario(produto.getValorUnitario());
 		produtoDTO.setUrl(uri.toString());
 		return produtoDTO;
+		//id produto
 	}
 	
 	public ProdutoMostrarDTO buscar(Long id) {
