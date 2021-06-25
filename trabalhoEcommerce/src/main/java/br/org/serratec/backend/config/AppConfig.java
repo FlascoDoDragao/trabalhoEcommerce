@@ -20,7 +20,7 @@ public class AppConfig implements WebMvcConfigurer{
 
         registry.addMapping("/**")
                 .allowedOrigins(
-                        "http://localhost:3000/")
+                        "http://localhost:3000/", "https://ecommerceflasco.vercel.app")
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "HEAD")
                 .allowCredentials(true)
         ;
