@@ -40,6 +40,7 @@ public class ProdutoService {
 		URI uri = ServletUriComponentsBuilder.fromCurrentContextPath().path("/produtos/{id}/foto").buildAndExpand(produto.getId()).toUri();
 		System.out.println("URI: " + uri);
 		ProdutoMostrarDTO produtoDTO = new ProdutoMostrarDTO();
+		produtoDTO.setId(produto.getId());
 		produtoDTO.setNome(produto.getNome());
 		produtoDTO.setCategoria(produto.getCategoria());
 		produtoDTO.setDataCadastro(produto.getDataCadastro());

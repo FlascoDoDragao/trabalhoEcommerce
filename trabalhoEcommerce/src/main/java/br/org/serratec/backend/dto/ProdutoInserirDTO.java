@@ -26,6 +26,7 @@ public class ProdutoInserirDTO {
 		this.categoria = produto.getCategoria();
 	}
 
+
 	public String getNome() {
 		return nome;
 	}
