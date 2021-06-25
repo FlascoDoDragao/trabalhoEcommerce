@@ -6,6 +6,7 @@ import br.org.serratec.backend.model.Categoria;
 import br.org.serratec.backend.model.Produto;
 
 public class ProdutoMostrarDTO {
+	private Long id;
 	private String nome;
 	private String url;
 	private Double valorUnitario;
@@ -19,11 +20,21 @@ public class ProdutoMostrarDTO {
 
 	public ProdutoMostrarDTO(Produto produto) {
 		super();
+		this.id = produto.getId();
 		this.nome = produto.getNome();
 		this.valorUnitario = produto.getValorUnitario();
 		this.categoria = produto.getCategoria();
 		this.descricao = produto.getDescricao();
 		this.DataCadastro = produto.getDataCadastro();
+	}
+
+	
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public String getNome() {

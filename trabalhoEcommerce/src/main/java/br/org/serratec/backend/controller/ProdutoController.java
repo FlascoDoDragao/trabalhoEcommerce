@@ -46,7 +46,12 @@ public class ProdutoController {
     @ResponseStatus (HttpStatus.CREATED)
 	public ProdutoMostrarDTO inserir(@RequestParam MultipartFile file, @RequestPart Produto produto) throws IOException{
         return produtoService.inserir(produto, file);
-
+	}
+	
+	@PostMapping("/semimagem")
+    @ResponseStatus (HttpStatus.CREATED)
+	public ProdutoMostrarDTO inserir(@RequestBody ProdutoInserirDTO produto){
+        return produtoService.inserir(produto);
 	}
 	
 	@GetMapping ("/{id}/imagem")
