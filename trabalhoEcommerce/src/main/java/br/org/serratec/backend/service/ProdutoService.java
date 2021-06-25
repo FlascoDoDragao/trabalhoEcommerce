@@ -37,7 +37,7 @@ public class ProdutoService {
 
 	
 	public ProdutoMostrarDTO adicionarFotoURL(Produto produto) {
-		URI uri = ServletUriComponentsBuilder.fromCurrentContextPath().path("/produtos/{id}/foto").buildAndExpand(produto.getId()).toUri();
+		URI uri = ServletUriComponentsBuilder.fromCurrentContextPath().path("/produtos/{id}/imagem").buildAndExpand(produto.getId()).toUri();
 		System.out.println("URI: " + uri);
 		ProdutoMostrarDTO produtoDTO = new ProdutoMostrarDTO();
 		produtoDTO.setId(produto.getId());
