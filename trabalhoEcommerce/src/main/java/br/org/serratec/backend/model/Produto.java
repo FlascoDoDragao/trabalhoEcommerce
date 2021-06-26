@@ -53,6 +53,9 @@ public class Produto {
 	@ApiModelProperty(value = "Categoria")
 	private Categoria categoria;
 	
+	@Column(name = "qtd_estoque")
+    private Integer qtdEstoque;
+	
 	@OneToOne(mappedBy = "produto", cascade = CascadeType.ALL)
 	private Imagem imagem;
 	
@@ -65,10 +68,12 @@ public class Produto {
 		// TODO Auto-generated constructor stub
 	}
 
+
 	public Produto(Long id,
 			@NotBlank(message = "Campo NOME vazio") @Size(max = 30, message = "NOME acima de 30 caracteres") String nome,
 			@Size(max = 100, message = "DESCRIÇÃO acima de 100 caracteres") String descricao,
-			@Past LocalDate dataCadastro, Double valorUnitario, Categoria categoria) {
+			@Past LocalDate dataCadastro, Double valorUnitario, Categoria categoria, Integer qtdEstoque,
+			Imagem imagem) {
 		super();
 		this.id = id;
 		this.nome = nome;
@@ -76,8 +81,19 @@ public class Produto {
 		this.dataCadastro = dataCadastro;
 		this.valorUnitario = valorUnitario;
 		this.categoria = categoria;
-		//this.itemPedido = itemPedido;
+		this.qtdEstoque = qtdEstoque;
+		this.imagem = imagem;
 	}
+	
+	public Integer getQtdEstoque() {
+		return qtdEstoque;
+	}
+
+
+	public void setQtdEstoque(Integer qtdEstoque) {
+		this.qtdEstoque = qtdEstoque;
+	}
+
 
 	public Long getId() {
 		return id;
