@@ -11,6 +11,7 @@ public class ProdutoInserirDTO {
     private LocalDate dataCadastro;
     private Double valorUnitario;
 	private Categoria categoria;
+	private Integer qtdEstoque;
 	
 	
 	public ProdutoInserirDTO() {
@@ -24,6 +25,7 @@ public class ProdutoInserirDTO {
 		this.dataCadastro = produto.getDataCadastro();
 		this.valorUnitario = produto.getValorUnitario();
 		this.categoria = produto.getCategoria();
+		this.qtdEstoque = produto.getQtdEstoque();
 	}
 
 
@@ -67,6 +69,15 @@ public class ProdutoInserirDTO {
 	public void setCategoria(Categoria categoria) {
 		this.categoria = categoria;
 	}
+
+	public Integer getQtdEstoque() {
+		return qtdEstoque;
+	}
+
+	public void setQtdEstoque(Integer qtdEstoque) {
+		this.qtdEstoque = qtdEstoque;
+	}
+
 	
 	
 }

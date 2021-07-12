@@ -46,6 +46,7 @@ public class ProdutoService {
 		produtoDTO.setDataCadastro(produto.getDataCadastro());
 		produtoDTO.setDescricao(produto.getDescricao());
 		produtoDTO.setNome(produto.getNome());
+		produtoDTO.setQntEstoque(produtoDTO.getQntEstoque());
 		produtoDTO.setValorUnitario(produto.getValorUnitario());
 		produtoDTO.setUrl(uri.toString());
 		return produtoDTO;

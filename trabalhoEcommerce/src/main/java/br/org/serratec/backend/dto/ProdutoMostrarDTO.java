@@ -13,6 +13,7 @@ public class ProdutoMostrarDTO {
 	private Categoria categoria;
 	private String descricao;
 	private LocalDate DataCadastro;
+	private Integer qntEstoque;
 
 	public ProdutoMostrarDTO() {
 		// TODO Auto-generated constructor stub
@@ -26,6 +27,7 @@ public class ProdutoMostrarDTO {
 		this.categoria = produto.getCategoria();
 		this.descricao = produto.getDescricao();
 		this.DataCadastro = produto.getDataCadastro();
+		this.qntEstoque = produto.getQtdEstoque();
 	}
 
 	
@@ -39,6 +41,14 @@ public class ProdutoMostrarDTO {
 
 	public String getNome() {
 		return nome;
+	}
+	
+	public Integer getQntEstoque() {
+		return qntEstoque;
+	}
+
+	public void setQntEstoque(Integer qntEstoque) {
+		this.qntEstoque = qntEstoque;
 	}
 
 	public void setNome(String nome) {
